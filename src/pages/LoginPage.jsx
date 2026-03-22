@@ -133,6 +133,10 @@ function LoginPage() {
                     <span className="material-symbols-outlined" style={{ fontSize: '14px' }}>help</span>
                     <span className="support-text">Technical Support</span>
                 </a>
+                <a href="/admin" className="support-link admin-link glass-effect">
+                    <span className="material-symbols-outlined" style={{ fontSize: '14px' }}>shield_person</span>
+                    <span className="support-text">Admin Login</span>
+                </a>
             </footer>
         </div>
     )
