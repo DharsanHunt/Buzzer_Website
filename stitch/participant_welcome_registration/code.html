@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>QuizMaster Pro - Registration</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Fonts: Manrope & Inter -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "error": "#ba1a1a",
+              "inverse-on-surface": "#f0f1f2",
+              "surface-container-high": "#e7e8e9",
+              "on-tertiary-fixed": "#380d00",
+              "primary-fixed-dim": "#adc7ff",
+              "surface-container-lowest": "#ffffff",
+              "on-primary-container": "#c9d9ff",
+              "surface": "#f8f9fa",
+              "on-tertiary": "#ffffff",
+              "secondary-fixed": "#d1e4ff",
+              "tertiary": "#822800",
+              "on-surface": "#191c1d",
+              "on-secondary-container": "#445f7f",
+              "on-error-container": "#93000a",
+              "surface-container-highest": "#e1e3e4",
+              "primary": "#004493",
+              "secondary": "#456080",
+              "on-tertiary-fixed-variant": "#812800",
+              "background": "#f8f9fa",
+              "on-secondary-fixed-variant": "#2d4867",
+              "on-secondary": "#ffffff",
+              "error-container": "#ffdad6",
+              "on-primary-fixed-variant": "#004493",
+              "surface-tint": "#005bc0",
+              "outline": "#737785",
+              "on-tertiary-container": "#ffcebd",
+              "surface-container-low": "#f3f4f5",
+              "on-background": "#191c1d",
+              "inverse-primary": "#adc7ff",
+              "surface-dim": "#d9dadb",
+              "surface-bright": "#f8f9fa",
+              "on-primary-fixed": "#001a41",
+              "on-primary": "#ffffff",
+              "surface-variant": "#e1e3e4",
+              "outline-variant": "#c3c6d6",
+              "primary-container": "#005bc0",
+              "on-secondary-fixed": "#001d36",
+              "tertiary-fixed": "#ffdbcf",
+              "secondary-container": "#bed9ff",
+              "surface-container": "#edeeef",
+              "tertiary-fixed-dim": "#ffb59b",
+              "secondary-fixed-dim": "#adc9ed",
+              "on-surface-variant": "#424654",
+              "inverse-surface": "#2e3132",
+              "primary-fixed": "#d8e2ff",
+              "tertiary-container": "#a93802",
+              "on-error": "#ffffff"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-effect {
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+      }
+      .buzzer-gradient {
+        background: linear-gradient(135deg, #004493 0%, #005bc0 100%);
+      }
+    </style>
+</head>
+<body class="bg-background font-body text-on-surface">
+<!-- TopNavBar (Shared Component) -->
+<!-- Suppression logic check: This is a landing/registration page, but TopNavBar provides identity and 'Join Room' context. -->
+<nav class="fixed top-0 w-full z-50 bg-slate-50/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center px-6 py-3 max-w-full mx-auto">
+<!-- Brand Logo -->
+<div class="text-xl font-bold text-blue-900 dark:text-blue-100 font-manrope tracking-tight">
+                QuizMaster Pro
+            </div>
+<!-- Navigation Links -->
+<div class="hidden md:flex items-center space-x-8 font-manrope tracking-tight font-bold">
+<a class="text-slate-500 dark:text-slate-400 hover:text-blue-600 transition-colors duration-300" href="#">Dashboard</a>
+<a class="text-blue-700 dark:text-blue-300 border-b-2 border-blue-700 dark:border-blue-300 pb-1" href="#">Join Room</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-blue-600 transition-colors duration-300" href="#">History</a>
+</div>
+<!-- Trailing Actions -->
+<div class="flex items-center space-x-4">
+<div class="hidden sm:flex items-center space-x-2 mr-2">
+<button class="p-2 rounded-full hover:bg-slate-100/50 dark:hover:bg-white/5 transition-colors duration-300 active:scale-95">
+<span class="material-symbols-outlined text-slate-600 dark:text-slate-400" data-icon="notifications">notifications</span>
+</button>
+<button class="p-2 rounded-full hover:bg-slate-100/50 dark:hover:bg-white/5 transition-colors duration-300 active:scale-95">
+<span class="material-symbols-outlined text-slate-600 dark:text-slate-400" data-icon="settings">settings</span>
+</button>
+</div>
+<button class="bg-primary text-on-primary px-5 py-2 rounded-xl font-manrope font-bold active:scale-95 transition-transform text-sm">
+                    Create Quiz
+                </button>
+<div class="w-10 h-10 rounded-full overflow-hidden bg-surface-container-high border-2 border-primary/10">
+<img alt="User profile avatar" data-alt="User profile avatar with professional lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCB8jbFfCCNkdYtq4eNA6VI_vHEEuUZOgQCpOvzNMawAU5cd-tAPdz4QbMfF-yS1OU2U0U7JDHagWW6cTnAE_f0Jbe15EE3m8qPKasmIWo3EsGpOj_CsbT_dVPysXvyUuAupwMGfAUhuE3AEWusUOAhFd6PPboqAD8fTQO2dloCQvMS1LLxmxPQ597nzp-yP6iaQYGy_DGQ8S4-ljggj_SAqQ5Zv8j2bpyTrokwZ1RpnB6_HRfPFYCWT8PwYE4DWhZaC2_mH9PmnxxR"/>
+</div>
+</div>
+</div>
+<div class="bg-slate-200/50 dark:bg-slate-800/50 h-[1px]"></div>
+</nav>
+<!-- Main Registration Canvas -->
+<main class="min-h-screen pt-24 pb-12 flex items-center justify-center px-4 overflow-hidden">
+<!-- Background Decorative Element (Asymmetry) -->
+<div class="fixed top-1/2 left-0 -translate-y-1/2 -translate-x-1/2 opacity-[0.03] select-none pointer-events-none">
+<span class="font-headline font-extrabold text-[40rem] leading-none text-primary">01</span>
+</div>
+<div class="max-w-4xl w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
+<!-- Left Side: Welcome Content (Editorial Approach) -->
+<section class="space-y-8">
+<div>
+<span class="text-xs font-label font-medium tracking-[0.2em] uppercase text-primary mb-4 block">Participant Entry</span>
+<h1 class="font-headline text-5xl font-extrabold text-on-surface tracking-tight leading-tight">
+                        Assemble Your <span class="text-primary">Knowledge Squad.</span>
+</h1>
+</div>
+<p class="text-lg text-on-surface-variant leading-relaxed font-body">
+                    Welcome to the Global Championship 2024. Your team is one step away from entering the arena. Ensure your name reflects your ambition.
+                </p>
+<div class="flex items-center gap-6 py-4">
+<div class="flex -space-x-3">
+<div class="w-10 h-10 rounded-full border-2 border-white bg-surface-container-high overflow-hidden">
+<img alt="Avatar 1" data-alt="User avatar 1" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6vEdCxwOGB8NYgzM0kXlz_6K9gk4RAEKu5YawFLdlbbJPEmXBasNxPlRvPvgvQEj8zzoJ5NrSr6zNsBITyqNKwGSA1ygvum35rLYRhyNHOjngR0OCzXvPUNR15vJmkztUACFI39nxQq9sN6mHLUo3Snd4m6sYKEndBCGONis_GkuH07u-tNQFAgIzTVSG2qBkJ1-iPtpvYI81fYK04ulg5TmmrslZUFMcgX08qK3S3NjN6fDaZ90ChHxuTEOnhxn-tsZvP5ACiMXv"/>
+</div>
+<div class="w-10 h-10 rounded-full border-2 border-white bg-surface-container-high overflow-hidden">
+<img alt="Avatar 2" data-alt="User avatar 2" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJq-vBDogm11vl8hv91NWPK0uJ5AaB03TOVH7oKcEbqLFmNOlyG6TBhvmPViwZlg0xl1GEWaoExalY0V6HY9r6pv5NwdvMMc7Sl-VG-UXrZ3Mdk57kg0dO8owHxTwe9UFUR3Tim2xlZGl-0ljEGe0gkcXXWpfWSGN7yAUBldjLuJVyIKNJ2Rto80Dz3HKBdEm1fa-C98pnbULWEo1ShkjsaTA-ew6gSpUpNsuomcHGdhCUsLF0Mi2FfSQAkxU8_Hhihea2iKms3q8S"/>
+</div>
+<div class="w-10 h-10 rounded-full border-2 border-white bg-surface-container-high overflow-hidden">
+<img alt="Avatar 3" data-alt="User avatar 3" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLRlcjJmjhCaCFwSEggkXcB7LmUlIuTC3DWR3g3c6Fshxz-BAfRdiOUywVPSm_zkQTDI41GvJIDQexG3wrZ8yJXFJY6xQFH4JFnYCUkd4UpTXQ3P_SB28cuaH6Wdg4VyPlPvjfFZu69dPqvNIk7wZMGj7OWzhLMuKjUjeLkO34-tlfJKuBtnyLvESkXwMXY2EmVoDipAMNL7fA932oCxXRPxBR8m0qSHH9iIq5-JDWvAbINvgO5fV4x_BmDdgZvEuCBG3rCGrlbYl-"/>
+</div>
+</div>
+<span class="text-sm font-label text-on-surface-variant">1,204 teams already joined</span>
+</div>
+</section>
+<!-- Right Side: Registration Card (Glass/Layered Principle) -->
+<section class="bg-surface-container-lowest p-10 rounded-[2rem] shadow-[0_12px_40px_rgba(0,68,147,0.06)] border border-white/50">
+<form class="space-y-8">
+<!-- Team Name Input -->
+<div class="space-y-3">
+<label class="block text-xs font-label font-bold uppercase tracking-widest text-on-surface-variant" for="team-name">
+                            Team Identity
+                        </label>
+<div class="relative group">
+<input class="w-full bg-surface-container-low border-none rounded-xl py-4 px-5 text-lg font-headline font-semibold text-on-surface focus:ring-2 focus:ring-primary/20 transition-all placeholder:text-outline/50 placeholder:font-normal" id="team-name" placeholder="Enter your team name..." type="text"/>
+<div class="absolute inset-y-0 right-4 flex items-center text-primary/40">
+<span class="material-symbols-outlined" data-icon="groups">groups</span>
+</div>
+</div>
+</div>
+<!-- Rules & Regulations Section -->
+<div class="space-y-4">
+<label class="block text-xs font-label font-bold uppercase tracking-widest text-on-surface-variant">
+                            Rules of Engagement
+                        </label>
+<div class="bg-surface-container-low/50 rounded-xl p-6 h-48 overflow-y-auto custom-scrollbar border border-outline-variant/20">
+<div class="space-y-4 text-sm text-on-surface-variant font-body">
+<p><strong>1. Professionalism:</strong> All team names and communications must remain academic and professional.</p>
+<p><strong>2. Fair Play:</strong> External digital assistance or AI tools are strictly prohibited during the live session.</p>
+<p><strong>3. Latency:</strong> Users are responsible for their own network stability. QuizMaster Pro is not liable for disconnects.</p>
+<p><strong>4. Intellectual Property:</strong> All quiz content is proprietary to QuizMaster Pro and cannot be reproduced.</p>
+<p><strong>5. Verification:</strong> Teams may be asked to verify identities for prize distribution.</p>
+</div>
+</div>
+<label class="flex items-start gap-4 cursor-pointer group mt-4">
+<div class="relative flex items-center">
+<input class="peer h-6 w-6 rounded-md border-outline-variant text-primary focus:ring-primary/20 transition-all cursor-pointer bg-surface-container-low" type="checkbox"/>
+</div>
+<span class="text-sm font-body text-on-surface-variant leading-tight group-hover:text-on-surface transition-colors">
+                                I have read and agree to the tournament's Rules &amp; Regulations.
+                            </span>
+</label>
+</div>
+<!-- CTA Button (Signature Component Style) -->
+<button class="w-full buzzer-gradient text-white py-5 rounded-xl font-headline font-bold text-lg shadow-[0_12px_40px_rgba(0,68,147,0.12)] active:scale-[0.98] transition-all hover:brightness-110 flex items-center justify-center gap-3" type="submit">
+                        Enter Arena
+                        <span class="material-symbols-outlined text-xl" data-icon="rocket_launch">rocket_launch</span>
+</button>
+<p class="text-center text-xs font-label text-outline uppercase tracking-tighter">
+                        Next: Session Lobby • Estimated Wait <span class="text-primary font-bold">2m</span>
+</p>
+</form>
+</section>
+</div>
+</main>
+<!-- Support Link (Subtle Tonal Shift) -->
+<footer class="fixed bottom-8 left-1/2 -translate-x-1/2">
+<a class="flex items-center gap-2 text-on-surface-variant hover:text-primary transition-colors py-2 px-4 rounded-full bg-surface-container-low/50 glass-effect border border-white/40" href="#">
+<span class="material-symbols-outlined text-sm" data-icon="help">help</span>
+<span class="text-xs font-label font-semibold">Technical Support</span>
+</a>
+</footer>
+<!-- CSS Overrides for scrollbar -->
+<style>
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #c3c6d6;
+            border-radius: 10px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #737785;
+        }
+    </style>
+</body></html>
